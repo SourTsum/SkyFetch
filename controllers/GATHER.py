@@ -47,7 +47,7 @@ def start():
             graph_coins_data.append(coins_in_market)
             graph_size_data.append(gather_stats["hourly_data"])
 
-        if session_seconds != 0 and session_seconds % 180 == 0:
+        if session_seconds != 0 and session_seconds % 3600 == 0:
             UTILS.create_skyfetch_img(gather_stats,graph_coins_data,graph_size_data)
             gather_stats["hourly_data"] = 0
 
